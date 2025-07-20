@@ -1,87 +1,115 @@
-# Welcome to React Router!
 
-A modern, production-ready template for building full-stack React applications using React Router.
+# 🧠 AI Resume Analyzer || RESHUNT
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+The **AI Resume Analyzer** is an intelligent web app that evaluates your resume against a job description, job title, and company name to provide a score and AI-powered suggestions for improvement — all in real time.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+- 📄 Upload Resume (PDF format)
+- 🏢 Enter Company Name, Job Title & Job Description manually
+- 🤖 AI-powered feedback using smart prompts
+- 📊 Resume score based on:
+  - Keyword matching
+  - Formatting
+  - Experience relevance
+- 🧠 Resume parsing with `pdfjs-dist`
+- 🔐 User authentication with `puter.js`
+- 🧰 Pure client-side rendering (React + Zustand)
+- 📎 Future Plans:
+  - Upload job description PDF
+  - Real-time feedback from LinkedIn job posts via Chrome extension
+  - Automated scraping of job descriptions
+
+---
+
+## 🛠 Tech Stack
+
+| Technology        | Description                           |
+|-------------------|---------------------------------------|
+| **React 19**      | Frontend library                      |
+| **Zustand**       | Lightweight state management          |
+| **Tailwind CSS**  | Styling framework                     |
+| **Puter.js**      | Auth & API handling abstraction       |
+| **pdfjs-dist**    | PDF resume parsing                    |
+| **Vite**          | Development bundler                   |
+| **TypeScript**    | Type safety                           |
+| **React Router v7**| Routing with build/start support     |
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abhi352003/Resume-Analyzer.git
+   cd resume-analyzer
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run in development**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Serve production build**
+   ```bash
+   npm start
+   ```
+
+---
+
+## 📁 Folder Structure
+
+```
+resume-analyzer/
+├── public/
+├── app/
+│   ├── components/
+│   ├── lib/
+│   ├── routes/
+│   ├── store/           
+│   ├── utils/           
+│   └── root.tsx
+|
+|__types
+|__ constants
+├── tailwind.config.js
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## 🔐 Authentication
+
+User login and session management is handled by `puter.js`, offering built-in methods for:
+- Sign In / Sign Out
+- Session checks
+- Secure API interactions
+
+---
+
+## 📌 Future Features
+
+- [ ] Upload job description PDF and auto-analyze
+- [ ] LinkedIn Chrome extension to scrape job descriptions
+- [ ] Real-time feedback for LinkedIn job pages
+- [ ] Export feedback as PDF
+- [ ] Multi-resume comparison and history tracking
+
+
+
+
+
+
